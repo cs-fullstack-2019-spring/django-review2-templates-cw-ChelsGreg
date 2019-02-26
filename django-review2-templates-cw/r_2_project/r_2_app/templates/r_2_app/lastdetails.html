@@ -1,0 +1,39 @@
+<!--TO SYNC PAGES-->
+
+{% extends 'r_2_app/songs.html' %}
+
+<!--USED TO SYNC NEXT PAGE-->
+{% block content %}
+
+<!--TABLE FOR ALBUM INFO/ AND LINKS TO: LYRICS/AUDO AND PREVIOUS PAGES-->
+<table>
+    <tr>
+        <td>Album</td>
+        <td>{{ listen_here.song_album }}</td>
+
+    </tr>
+    <tr>
+        <td>Lyrics:</td>
+        <td><a href="{{ listen_here.song_lyrics }}">Click Here</a></td>
+
+    </tr>
+
+    <tr>
+        <td>Audio</td>
+        <td><a href="{{ listen_here.song_audio }}">Click Here</a></td>
+
+    </tr>
+    <tr>
+        <td><a href="{% url 'list_songs' %}">Song List</a></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{% url 'song_details' listen_here.song_id %}">First Details</a></td>
+    </tr>
+
+</table>
+
+
+
+{% endblock content%}
+

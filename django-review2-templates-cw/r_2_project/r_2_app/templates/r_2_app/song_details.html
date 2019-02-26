@@ -1,0 +1,27 @@
+<!--TO SYNC PAGES-->
+{% extends 'r_2_app/songs.html' %}
+
+
+<!--USED TO SYNC THIS PAGE-->
+{% block content %}
+
+<!--TABLE FOR SONG TITLE AND BAND, AND LINK TO NEXT DETAILS PAGE-->
+<table class="table">
+    <tr>
+        <td>Song Title:</td>
+        <td>{{ current_song.song_title }}</td>
+
+    </tr>
+
+    <tr>
+        <td>Band:</td>
+        <td>{{ current_song.song_band }}</td>
+
+    </tr>
+    <tr>
+        <td><a href="{% url 'lastdetails' current_song.song_id %}">Further Details Here</a></td>
+    </tr>
+
+
+</table>
+{% endblock content %}
